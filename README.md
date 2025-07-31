@@ -24,7 +24,7 @@ This repository contains a customized PX4 simulation environment that enables mo
 
 3. Initialize the firmware to register the custom `uORB` message (`failure_flag.msg`):
 
-4. Launch the PX4 simulation in **Gazebo Classic**:
+4. Launch the PX4 simulation:
 
 ---
 
