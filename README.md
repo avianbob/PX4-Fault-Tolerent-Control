@@ -8,7 +8,7 @@ This repository contains a customized PX4 simulation environment that enables mo
 
 - This firmware is designed for **Gazebo-Classic (ROS1)** and **Gazebo-Harmonic (ROS2)** simulations.
 - **Ignore inbuilt PX4 failsafe messages** that may appear in the PX4 console during simulation.
-- If the firmware does not build after unzipping, clone the repo directly using:
+- Clone the repo using:
 
   ```bash
   git clone https://github.com/avianbob/PX4-Fault-Tolerent-Control.git
@@ -20,11 +20,15 @@ This repository contains a customized PX4 simulation environment that enables mo
 
 1. Download or clone the repository.
 
-2. Navigate to the PX4 firmware directory:
+2. Navigate to the PX4 firmware directory.
 
 3. Initialize the firmware to register the custom `uORB` message (`failure_flag.msg`):
 
-4. Launch the PX4 simulation:
+```bash
+make px4_sitl
+```
+
+4. Launch the PX4 simulation.
 
 ---
 
