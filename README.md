@@ -42,7 +42,7 @@ By default, a **discrete complete shutdown** will occur on **motor index 0** aft
 
 ### Configuration File
 
-To implement different types of failure you have to edit the following file - `PX4-Autopilot-Team86/src/modules/control_allocator/ControlAllocator.cpp`
+To implement different types of failure you have to edit the following file - `PX4-Autopilot/src/modules/control_allocator/ControlAllocator.cpp`
 
 ### Failure Types
 
@@ -105,7 +105,7 @@ Modify:
 
 Once airborne (`commander takeoff`), detection logic automatically monitors motor failure.
 
-Edit: `PX4-Autopilot-Team86/src/modules/commander/Commander.cpp`
+Edit: `PX4-Autopilot/src/modules/commander/Commander.cpp`
 
 Modify:
 - Line 224: `windowSize` – sliding window size for detection
@@ -135,19 +135,19 @@ Upon failure detection, the controller switches to a **custom recovery strategy*
 #### a. MRAC
 
 ```bash
-cp ControlAllocator-Geometric.cpp ../PX4-Autopilot-Team86/src/modules/control_allocator/ControlAllocator.cpp
+cp ControlAllocator-Geometric.cpp ../PX4-Autopilot/src/modules/control_allocator/ControlAllocator.cpp
 ```
 
 #### b. SMC
 
 ```bash
-cp Commander-Sliding.cpp ../PX4-Autopilot-Team86/src/modules/commander/Commander.cpp
+cp Commander-Sliding.cpp ../PX4-Autopilot/src/modules/commander/Commander.cpp
 ```
 
 #### c. MPC + INDI
 
 ```bash
-cp Commander-MPC.cpp ../PX4-Autopilot-Team86/src/modules/commander/Commander.cpp
+cp Commander-MPC.cpp ../PX4-Autopilot/src/modules/commander/Commander.cpp
 ```
 
 3. Rebuild PX4-Autopilot
@@ -159,7 +159,7 @@ To add wind effects:
 1. Navigate to:
 
    ```bash
-   cd PX4-Autopilot-Team86/Tools/simulation/gazebo-classic/sitl_gazebo-classic/worlds
+   cd PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic/worlds
    ```
 
 2. Open the `.world` file and **uncomment** the `wind_plugin` block.
