@@ -11,7 +11,7 @@ This repository contains a customized PX4 simulation environment that enables mo
 - If the firmware does not build after unzipping, clone the repo directly using:
 
   ```bash
-  git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+  git clone https://github.com/avianbob/PX4-Fault-Tolerent-Control.git
   ```
 
 ---
